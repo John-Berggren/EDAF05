@@ -14,10 +14,21 @@
 
   \section{Results}
 
-  \todo[inline]{Briefly comment the results, did the script say all your solutions were correct? Approximately how long time does it take for the program to run on the largest input? What takes the majority of the time?}
+  \todo[inline]{Briefly comment the results, did the script say all your solutions were correct? 
+  Approximately how long time does it take for the program to run on the largest input? What takes 
+  the majority of the time?}
+
+ All of the solutions were correct. For 5large it took about 6 seconds to run. To build the graph 
+ because it compares all the pairs of words that has the time complexity of O(n^2).
 
   \section{Implementation details}
 
-  \todo[inline]{How did you implement the solution? Which data structures were used? Which modifications to these data structures were used? What is the overall running time? Why?}
+  \todo[inline]{How did you implement the solution? Which data structures were used? Which 
+  modifications to these data structures were used? What is the overall running time? Why?}
+
+  Modeled the words as a directed graph, then each query is answered with BFS to fins the shortest 
+  path between two words. String [] to store words, List<Integer>[] to represent the graph, 
+  HashMap<String, Integer> to map each word to its index, Queue<Integer> used in BFS to process 
+  words level by level, int[] dist to store distance from start word.  O(n^2 + Q(n+m)).
 
 \end{document}

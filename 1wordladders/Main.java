@@ -7,6 +7,7 @@ public class Main {
     static int N, Q;
 
     public static void main(String[] args) {
+        long startTime = System.nanoTime(); // START
         Scanner sc = new Scanner(System.in);
 
         N = sc.nextInt();
@@ -46,6 +47,11 @@ public class Main {
         }
 
         sc.close();
+
+        long endTime = System.nanoTime(); // STOP
+
+        double timeMs = (endTime - startTime) / 1_000_000.0;
+        System.out.println("Körtid: " + timeMs + " ms");
     }
 
     //Bygg graf
